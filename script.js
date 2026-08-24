@@ -21,7 +21,7 @@ function buildMailBody(formData) {
         "",
         `Vorname: ${formData.get("firstName")}`,
         `Nachname: ${formData.get("lastName")}`,
-        `Gewünschtes  Menü: ${selectedMenü()}`,
+        `Gewünschtes  Menü: ${selectedMenu()}`,
         `Ernährungsbesonderheiten/Unverträglichkeiten: ${dietOptions.length ? dietOptions.join(", ") : "Keine ausgewählt"}`,
         `Weitere Angaben zu Unverträglichkeiten ${formData.get("dietNotes") || "Keine Angabe"}`,
         `Allgemeine oder andere Mitteilungen: ${formData.get("generalMessage") || "Keine Angabe"}`,
@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
-        hint.textContect = "Bitte füllen Sie Vorname, Nachname aus und wählen Sie ein Menü aus.";
+        hint.textContent = "Bitte füllen Sie Vorname, Nachname aus und wählen Sie ein Menü aus.";
         form.reportValidity();
         return;
     }
@@ -41,9 +41,8 @@ form.addEventListener("submit", (event) => {
     const formData = new FormData(form);
     const subject = "Rückmeldung zum Mittagsmenü";
     const body = buildMailBody(formData);
-    const mailLink = `mailto:${recipient})?
-    subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     hint.textContent = "Ihr Standard-Mailprogramm wird geöffnet. Bitte prüfen Sie Ihre Eingaben und senden Sie die E-Mail dort ab.";
-    window.location.href = mailLInk;
+    window.location.href = mailLink;
 });
