@@ -10,7 +10,7 @@
     --muted: #66705c;
     --line: #dfd3bd;
     --meerblau: #4f8fa3;
-    --beige: #ddd1cb; 
+    --beige: #cdc4c1; 
     --shadow: 0 18px 45px rgba(56, 38, 22, 0.14);
 }
 * {
@@ -77,7 +77,7 @@ legend {
 
 h1 {
     margin: 0;
-    color: var(--olive);
+    color: var(--deep-green);
     font-size: 1.3rem;
     font-weight: 700;
 }
