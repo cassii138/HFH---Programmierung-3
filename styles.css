@@ -1,0 +1,244 @@
+:root {
+    --olive: #4e642f;
+    --deep-green: #263b24;
+    --lemon: #f3c94c;
+    --terracotta: #bc5c3f;
+    --cream: #fff8ec;
+    --paper: #fffdf7;
+    --ink: #1f261c;
+    --muted: #66705c;
+    --line: #dfd3bd;
+    --shadow: 0 18px 45px rgba(56, 38, 22, 0.14);
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background:
+        linear-gradient(120deg, rgba(243, 201, 76, 0.2), transparent 42%),
+        linear-gradient(210deg, rgba(188, 92, 63, 0.16), transparent 36%),
+        var(--cream);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 1.55;
+}
+
+.page-shell {
+    width: min(1180px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 42px 0 56px;
+}
+
+.hero {
+    padding: 46px min(6vw, 64px);
+    border: 1px solid rgba(78, 100, 47, 0.2);
+    background:
+        radial-gradient(circle at top right, rgba(243, 201, 76, 0.34), transparent 32%),
+        linear-gradient(135deg, rgba(255, 253, 247, 0.95), rgba(247, 231, 203, 0.88));
+        box-shadow:var(--shadow);
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--terracotta);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+legend {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    margin: 18px 0 0;
+    color: var(--olive);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.chef{
+    margin: 18px 0 0;
+    color: var(--cream);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 34px 0;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-top: 8px solid var(--olive);
+    background: var(--paper);
+    box-shadow: 0 12px 28px rgba(56, 38, 22, 0.09);
+}
+
+.menu-card:nth-child(2) {
+    border-top-color: var(--terracotta);
+}
+
+.menu-card:nth-child(3) {
+    border-top-color: var(--lemon);
+}
+
+.menu-code {
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: var(--paper);
+    background: var(--terracotta);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.menu-card h2 {
+    margin: 16px 0 10px;
+    color: var(--deep-green);
+    font-size: 1.7rem;
+}
+
+.menu-card ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.menu-card li + li {
+    margin-top: 10px;
+}
+
+.request-panel h2 {
+    margin: 0 0 22px;
+    color: var(--deep-green);
+    font-size: 2rem;
+}
+
+form {
+    display: grid;
+    gap: 22px;
+}
+
+.form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.check-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+label,
+legend {
+    color: var(--deep-green);
+    font-weight: 700;
+}
+
+input [type="text"],
+textarea {
+    width: 100%;
+    margin-top: 7px;
+    padding: 12px 14px;
+    border: 2px solid var(--line);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--ink);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--olive);
+    outline: 3px solid rgba(243, 201, 76, 0.35);
+}
+
+fieldset {
+    margin: 0;
+    padding: 18px;
+    border: 2px solid var(--line);
+}
+
+legend {
+    padding: 0 8px;
+    font-size: 1.2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1.05rem;
+    height: 1.05rem;
+    accent-color: var(--terracotta);
+}
+
+.form-hint {
+    min-height: 1.5em;
+    margin: 0;
+    color: var(--terracotta);
+    font-weight: 700;
+}
+
+.send-button {
+    justify-self: start;
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--terracotta);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 18px rgba(188, 92, 63, 0.25);
+}
+
+.send-button:hover,
+.send-button:focus {
+    background: #9e4930;
+    outline: 3px solid rgba(243, 201, 76, 0.45);
+}
+
+@media (max-width: 900px) {
+    .menu-grid
+    .check-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        font-size: 16px;
+    }
+
+    .page-shell {
+        width: min(100% - 22px, 1180px);
+        padding-top: 18px;
+    }
+
+    .hero,
+    .request-panel,
+    .menu-card {
+        padding: 22px;
+    }
+}
