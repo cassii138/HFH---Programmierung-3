@@ -46,10 +46,21 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 40px;
+    
+}
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .eyebrow {
-    margin: 0 0 48px;
+    margin: 0 0 28px;
     color: var(--terracotta);
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -64,7 +75,7 @@ legend {
 }
 
 h1 {
-    margin: 22px 0 0;
+    margin: 0;
     color: var(--olive);
     font-size: 1.3rem;
     font-weight: 700;
