@@ -14,17 +14,37 @@ function selectedMenu() {
 }
 
 function buildMailBody(formData) {
-    const dietOptions = selectedDietOptins() ;
+    const dietOptions = selectedDietOptions();
+
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
 
     return [
-        "Rückmeldung zum Mittagsmenü",
+        "Hallo,",
         "",
-        `Vorname: ${formData.get("firstName")}`,
-        `Nachname: ${formData.get("lastName")}`,
-        `Gewünschtes  Menü: ${selectedMenu()}`,
-        `Ernährungsbesonderheiten/Unverträglichkeiten: ${dietOptions.length ? dietOptions.join(", ") : "Keine ausgewählt"}`,
-        `Weitere Angaben zu Unverträglichkeiten ${formData.get("dietNotes") || "Keine Angabe"}`,
-        `Allgemeine oder andere Mitteilungen: ${formData.get("generalMessage") || "Keine Angabe"}`,
+        "hiermit möchte ich meine Rückmeldung zum gemeinsamen Mittagsessen abgeben.",
+        "",
+        "Meine Angaben:",
+        "",
+        `Vorname: ${firstName}`,
+        `Nachname: ${lastName}`,
+        "",
+        "Gewünschtes Menü:",
+        selectedMenu(),
+        "",
+        "Ernährungsbesonderheiten / Unverträglichkeiten:",
+        dietOptions.length
+            ? dietOptions.join(", ")
+            : "Keine ausgewählt",
+        "",
+        "Weitere Angaben zu Unverträglichkeiten:",
+        formData.get("dietNotes") || "Keine Angabe",
+        "",
+        "Allgemeine Informationen oder Anmerkungen:",
+        formData.get("generalMessage") || "Keine Angabe",
+        "",
+        "Viele Grüße",
+        `${firstName} ${lastName}`
     ].join("\n");
 }
 
