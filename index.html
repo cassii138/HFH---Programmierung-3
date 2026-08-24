@@ -1,1 +1,119 @@
-<h1></h1>
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagesveranstaltung - Mittagsmenü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <main class="page-shell">
+        <!--Kopfzeile-->
+        <header class="hero">
+            <p class="eyebrow">Tagesveranstaltung</p>
+            <h1>Ihre heutige Auswahl für das Mittagsmenü</h1>
+        </header>
+
+        <!--Hauptinhalt-->
+        <section class="menu-grid" aria-label="Menüauswahl">
+            <article class="menu-card">
+                <span class="menu-code">Menu 1</span>
+                <h2> Vegetarisch (lokal & raffiniert)</h2>
+                <h3> Chefköchin: Maria Schmidt</h3>
+                <ol>
+                    <li>Vorspeise: Cremige Tomaten-Basilikum Suppe mit hausgemachten Croutons</li>
+                    <li>Hauptgang: Spinat-Ricotta-Ravioli in brauner Salbeibutter und frisch geriebenem Parmensan</li>
+                    <li>Nachspeise: Himbeer Sorbet auf einem lauwarmen Beerenragout</li>
+                </ol>
+            </article>
+
+            <!--Darstellen von Menü2-->
+            <article class="menu-card">
+                <span class="menu-code">Menu 2</span>
+                <h2> Fleischliebhaber (regional & herzhaft)</h2>
+                <h3> Chefkoch: Thomas Meier</h3>
+                <ol>
+                    <li>Vorspeise: Rinderkraftbrühe mit frischen Kräutern und Einlage</li>
+                    <li>Hauptgang: Gebratene Hähnchenbrust auf Kartoffelgratin mit saisonalem Gemüse</li>
+                    <li>Nachspeise: Warmer Apfelstrudel mit Vanillesauce</li>
+                </ol>
+            </article>
+
+            <!--Darstellen von Menü3-->
+            <article class="menu-card">
+                <span class="menu-code">Menu 3</span>
+                <h2> Fischliebhaber (frisch & leicht)</h2>
+                <h3> Chefkoch: Andreas Weber</h3>
+                <ol>
+                    <li>Vorspeise: Geräucherte Lachsforelle auf Rucola mit Zitronen-Dill-Dressing</li>
+                    <li>Hauptgang: Gebratene Dorade auf mediterranem Gemüse und Kräuterreis</li>
+                    <li>Nachspeise: Zitronen-Mousse mit frischen Beeren</li>
+                </ol>
+            </article>
+        </section>
+
+        <!--Formular zur Angabe der Daten-->
+        <section class="request-panel" aria-labelledby="request-heading">
+            <h2 id="request-heading"> Die Auswahl Ihres Menüs</h2>
+
+            <form id="menuForm">
+                <div class="form-grid">
+                    <label>
+                        Vorname
+                        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                    </label>
+
+                    <label>
+                        Nachname
+                        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                    </label>
+                </div>
+
+                <!--Auswahl, welches Menü gewünscht ist-->
+                    <fieldset>
+                        <legend>Gewünschtes Menü</legend>
+                        <div class="choice-grid">
+                            <label><input type="radio" name="menuChoice" value="Menü 1 - Vegetarisch (lokal & raffiniert)" required> Menü 1 - Vegetarisch (lokal & raffiniert)</label>
+                            <label><input type="radio" name="menuChoice" value="Menü 2 - Fleischliebhaber (regional & herzhaft)" required> Menü 2 - Fleischliebhaber (regional & herzhaft)</label>
+                            <label><input type="radio" name="menuChoice" value="Menü 3 - Fischliebhaber (frisch & leicht)" required> Menü 3 - Fischliebhaber (frisch & leicht)</label>
+                            <label><input type="radio" name="menuChoice" value="Keines der Menüs"> Keines der Menüs</label>
+                        </div>
+                    </fieldset>
+
+                    <!--Auswahl von möglichen Unverträglichkeiten-->
+                    <fieldset>
+                        <legend>Unverträglichkeiten</legend>
+                        <div class="check-grid">
+                            <label><input type="checkbox" name="diet" value="Vegan"> Vegan </label>
+                            <label><input type="checkbox" name="diet" value="Glutenfrei"> Glutenfrei </label>
+                            <label><input type="checkbox" name="diet" value="Laktosefrei"> Laktosefrei </label>
+                            <label><input type="checkbox" name="diet" value="Nussallergie"> Nussallergie </label>
+                            <label><input type="checkbox" name="diet" value="Sojaallergie"> Sojaallergie </label>
+                            <label><input type="checkbox" name="diet" value="Fisch-/Meeresfrüchte-Allergie"> Fisch-/Meeresfrüchte-Allergie </label>
+                        </div>
+                    </fieldset>
+
+                    <!--Zwei freie Eingabefelder-->
+                    <label>
+                        Weitere Angaben zu Unverträglichkeiten oder Besonderheiten
+                        <textarea id="dietNotes" name="dietNotes" rows="4" placeholder="Hier können Sie uns weitere Informationen zu Ihren Vorlieben oder Unverträglichkeiten mitteilen."></textarea>
+                    </label>
+
+                    <label>
+                        Allgemeine Informationen oder Anmerkungen
+                        <textarea id="generalNotes" name="generalNotes" rows="4" placeholder="Hier können Sie uns allgemeine Informationen oder Anmerkungen mitteilen."></textarea>
+                    </label>
+
+                    <p id="formHint" class="form-hint" aria-live="polite"></p>
+
+                    <button type="submit" class="send-button">Absenden</button>
+
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
