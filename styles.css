@@ -199,6 +199,13 @@ legend {
     font-size: 1.2rem;
 }
 
+/*Auswahlmöglichkeiten untereinander anzeigen */
+fieldset label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
     width: 1.05rem;
