@@ -41,10 +41,15 @@ body {
         radial-gradient(circle at top right, rgba(243, 201, 76, 0.34), transparent 32%),
         linear-gradient(135deg, rgba(255, 253, 247, 0.95), rgba(247, 231, 203, 0.88));
         box-shadow:var(--shadow);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
 }
 
 .eyebrow {
-    margin: 0 0 24px;
+    margin: 0 0 48px;
     color: var(--terracotta);
     font-weight: 700;
     letter-spacing: 0.12em;
