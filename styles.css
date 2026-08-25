@@ -4,6 +4,8 @@
     --salbeigrün: #6b8e5a;
     --lemon: #f3c94c;
     --terracotta: #bc5c3f;
+    --burntorange: #d26a3a;
+    --midnightblue: #283747;
     --cream: #fff8ec;
     --paper: #fffdf7;
     --ink: #1f261c;
@@ -104,17 +106,17 @@ h1 {
     min-height: 100%;
     padding: 26px;
     border: 1px solid var(--line);
-    border-top: 8px solid var(--salbeigrün);
+    border-top: 8px solid var(--olive);
     background: var(--paper);
     box-shadow: 0 12px 28px rgba(56, 38, 22, 0.09);
 }
 
 .menu-card:nth-child(2) {
-    border-top-color: var(--terracotta);
+    border-top-color: var(--burntorange);
 }
 
 .menu-card:nth-child(3) {
-    border-top-color: var(--meerblau);
+    border-top-color: var(--midnightblue);
 }
 
 .menu-code {
