@@ -13,6 +13,9 @@
     --line: #dfd3bd;
     --meerblau: #4f8fa3;
     --beige: #cdc4c1; 
+    --italy-green: #008C45;
+    --italy-white: #F4F5F0;
+    --italy-red: #CD212A;
     --shadow: 0 18px 45px rgba(56, 38, 22, 0.14);
 }
 * {
@@ -107,17 +110,17 @@ h1 {
     min-height: 100%;
     padding: 26px;
     border: 1px solid var(--line);
-    border-top: 8px solid var(--olive);
+    border-top: 8px solid var(--italy-green);
     background: var(--paper);
     box-shadow: 0 12px 28px rgba(56, 38, 22, 0.09);
 }
 
 .menu-card:nth-child(2) {
-    border-top-color: var(--burntorange);
+    border-top-color: var(--italy-white);
 }
 
 .menu-card:nth-child(3) {
-    border-top-color: var(--midnightblue);
+    border-top-color: var(--italy-red);
 }
 
 .menu-code {
