@@ -235,7 +235,7 @@ input[type="checkbox"] {
     padding: 14px 22px;
     border: 0;
     border-radius: 8px;
-    background: var(--terracotta);
+    background: var(#3f7d4a;);
     font: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -244,7 +244,7 @@ input[type="checkbox"] {
 
 .send-button:hover,
 .send-button:focus {
-    background: #3f7d4a; 
+    background: #32643b; 
     outline: 3px solid rgba(243, 201, 76, 0.45);
 }
 
