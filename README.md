@@ -1,8 +1,6 @@
 # HFH---Programmierung-3
-Programmieraufgabe aus dem Modul Programmierung 3
+Dieses Repository behinhaltet die Bearbeitung der Programmieraufgaben (Variante A) im Modul Programmierung 3 der Hamburger Fern-Hochschule.
 
-Diese Aufgabe umfasst das Erstellen einer Website für eine Tagesveranstaltung und die Darstellung des Mittagsmenüs. 
+Diese Aufgabe umfasst das Erstellen einer Website, worauf das Mittagsmenü einer Tagesveranstaltung dargestellt werden soll. Per Formular sollen die Antworten der Teilnehmer an die Auftraggeberin gesendet werden. 
 
-Die Website wurde in der Datei index.tml programmiert. Das Design bzw. Layout der Seite wurde in der Datei styles.css gestaltet.
-
-Der Workflow zum Versenden, des programmierten Formulars ist in script.js aufzufinden.
+Mit der Datei index.html wurde die Website erstellt, in der Datei styles.css ist das Layout der Website definiert und das programmierte Erstellen der E-Mail ist in script.js zu finden.
