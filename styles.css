@@ -119,6 +119,7 @@ h1 {
     border-top-color: var(--italy-red);
 }
 
+/* Farbeinstellungen der Menüs */
 .menu-code {
     display: flex;
     padding: 4px 10px;
@@ -149,6 +150,7 @@ h1 {
     font-size: 2rem;
 }
 
+/* Einstellungen für das Formular */
 form {
     display: grid;
     gap: 22px;
@@ -212,6 +214,7 @@ fieldset label {
     cursor: pointer;
 }
 
+/* Definitonen bei Ausfüllen des Formulars */
 input[type="radio"],
 input[type="checkbox"] {
     width: 1.05rem;
@@ -226,6 +229,7 @@ input[type="checkbox"] {
     font-weight: 700;
 }
 
+/* Button zum Absenden des Formulars */
 .send-button {
     justify-self: start;
     padding: 14px 22px;
@@ -240,7 +244,7 @@ input[type="checkbox"] {
 
 .send-button:hover,
 .send-button:focus {
-    background: #9e4930;
+    background: #3f7d4a; 
     outline: 3px solid rgba(243, 201, 76, 0.45);
 }
 
