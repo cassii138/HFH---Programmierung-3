@@ -45,7 +45,7 @@ function buildMailBody(formData) {
         formData.get("dietNotes") || "Keine Angabe",
         "",
         "Allgemeine Informationen oder Anmerkungen:",
-        formData.get("generalMessage") || "Keine Angabe",
+        formData.get("generalNotes") || "Keine Angabe",
         "",
         "Viele Grüße",
         `${firstName} ${lastName}`
